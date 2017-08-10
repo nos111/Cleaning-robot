@@ -17,23 +17,25 @@ Each step is also explained in the inline comments.
 
 If you uncomment the ‘anim’ in the ‘runSimulation’ you will be able to see the robot moving in the room:
 
-Photo of robot movement
 <img src='https://github.com/nos111/MIT-OCW/blob/master/Introduction%20to%20Computer%20Science%20(fall%202008)/assignment11/images/RobotMovementSimulation.jpg?raw=true'>
 
 
 Functions to provide analytical data are provided:
--“showPlot1”  Produces a plot showing dependence of cleaning time on room size.
+<h2>-“showPlot1”  Produces a plot showing dependence of cleaning time on room size.</h2>
 <img src='https://github.com/nos111/MIT-OCW/blob/master/Introduction%20to%20Computer%20Science%20(fall%202008)/assignment11/images/GraphTimeXRoomSize.jpg?raw=true'>
 
-- “showPlot2’ Produces a plot showing dependence of cleaning time on number of robots.
+<h2>-“showPlot2’ Produces a plot showing dependence of cleaning time on number of robots.</h2>
 <img src='https://github.com/nos111/MIT-OCW/blob/master/Introduction%20to%20Computer%20Science%20(fall%202008)/assignment11/images/GraphTimeVSRobotsNumber.jpg?raw=true'>
 
 
-- “showPlot3” Produces a plot showing dependence of cleaning time on room shape.
+<h2>-“showPlot3” Produces a plot showing dependence of cleaning time on room shape.
+</h2>
 <img src="https://github.com/nos111/MIT-OCW/blob/master/Introduction%20to%20Computer%20Science%20(fall%202008)/assignment11/images/GraphTimeVSRoomSizeRatio.jpg?raw=true">
 
-- “showPlot4” Produces a plot showing cleaning time vs. percentage cleaned, for
-    each of 1-5 robots.
+<h2>-“showPlot4” Produces a plot showing cleaning time vs. percentage cleaned, for
+each of 1-5 robots.
+</h2>
 <img src="https://github.com/nos111/MIT-OCW/blob/master/Introduction%20to%20Computer%20Science%20(fall%202008)/assignment11/images/GraphTimeVSPercentageCleaned.png?raw=true">
 
-- "showPlot5" Produces a plot comparing the two robot strategies.
+<h2>-"showPlot5" Produces a plot comparing the two robot strategies.
+</h2>

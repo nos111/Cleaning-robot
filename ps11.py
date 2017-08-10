@@ -519,7 +519,7 @@ def showPlot4(numberOfRobots, room, percentageToClean, robotType, show):
     if show == True:
         plt.show()
 
-showPlot4(1, {'width': 25, 'height': 25}, 0.75, Robot, True)
+showPlot4(5, {'width': 25, 'height': 25}, 0.75, Robot, True)
 
 
 # === Problem 5
