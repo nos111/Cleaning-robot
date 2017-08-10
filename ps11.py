@@ -1,19 +1,9 @@
-# Problem Set 11: Simulating robots
-# Name:
-# Collaborators:
-# Time:
-
 import math
 import random
 import ps11_visualize
 import numpy as np
-
 import matplotlib.pyplot as plt
 
-
-
-
-# === Provided classes
 
 class Position(object):
     """
@@ -53,9 +43,6 @@ class Position(object):
         new_x = old_x + delta_x
         new_y = old_y + delta_y
         return Position(new_x, new_y)
-
-
-# === Problems 1 and 2
 
 class RectangularRoom(object):
     """
@@ -107,8 +94,6 @@ class RectangularRoom(object):
         n: an integer
         returns: True if (m, n) is cleaned, False otherwise
         """
-        # TODO: Your code goes here
-        
         try:
             return self.tiles[(m,n)]
         except KeyError:
@@ -120,7 +105,6 @@ class RectangularRoom(object):
 
         returns: an integer
         """
-        # TODO: Your code goes here
         return int(len(self.tiles.keys()))
     
     def getNumCleanedTiles(self):
@@ -129,7 +113,6 @@ class RectangularRoom(object):
 
         returns: an integer
         """
-        # TODO: Your code goes here
         cleanedTiles = 0
         for tile in self.tiles.keys():
             if self.tiles[tile] == True:
@@ -143,7 +126,6 @@ class RectangularRoom(object):
 
         returns: a Position object.
         """
-        # TODO: Your code goes here
         randomX = random.randrange(1,self.width + 1)
         randomY = random.randrange(1,self.height + 1)
         return Position(randomX, randomY)
@@ -155,7 +137,6 @@ class RectangularRoom(object):
         pos: a Position object.
         returns: True if POS is in the room, False otherwise.
         """
-        # TODO: Your code goes here
         try:
             self.tiles[(pos.getX(),pos.getY())]
             return True
@@ -187,7 +168,6 @@ class BaseRobot(object):
         room:  a RectangularRoom object.
         speed: a float (speed > 0)
         """
-        # TODO: Your code goes here
         self.speed = speed
         self.room = room
         self.d = random.randrange(0,361)
@@ -199,7 +179,6 @@ class BaseRobot(object):
 
         returns: a Position object giving the robot's position.
         """
-        # TODO: Your code goes here
         return self.p
     
     def getRobotDirection(self):
@@ -218,7 +197,6 @@ class BaseRobot(object):
 
         position: a Position object.
         """
-        # TODO: Your code goes here
         self.p = position
         
     def setRobotDirection(self, direction):
@@ -227,7 +205,6 @@ class BaseRobot(object):
 
         direction: integer representing an angle in degrees
         """
-        # TODO: Your code goes here
         self.d = direction
 
 
@@ -246,7 +223,6 @@ class Robot(BaseRobot):
         Move the robot to a new position and mark the tile it is on as having
         been cleaned.
         """
-        # TODO: Your code goes here
         #check if the tile I'm on hasn't been cleaned than mark it as clean
         if self.room.isTileCleaned(self.getRobotPosition().getX(),self.getRobotPosition().getY()) == False:
             #print 'tile was not clean'
@@ -283,8 +259,6 @@ class Robot(BaseRobot):
             #change the angel if it doesn't qualify
             self.setRobotDirection(self.d + 30)
                      
-        
-# === Problem 3
 
 def runSimulation(num_robots, speed, width, height, min_coverage, num_trials,
                   robot_type, visualize):
@@ -352,7 +326,6 @@ def runSimulation(num_robots, speed, width, height, min_coverage, num_trials,
     return endResults
 
 
-# === Provided function
 def computeMeans(list_of_lists):
     """
     Returns a list as long as the longest list in LIST_OF_LISTS, where
@@ -393,9 +366,6 @@ def computeAverageOfLists(listOfLists):
     return total / len(listOfLists)
 
     
-
-
-# === Problem 4
 def showPlot1(numberOfRobots, percentageToClean, roomSizeArray, robotType, show):
     """
     Produces a plot showing dependence of cleaning time on room size.
@@ -521,16 +491,12 @@ def showPlot4(numberOfRobots, room, percentageToClean, robotType, show):
 
 showPlot4(5, {'width': 25, 'height': 25}, 0.75, Robot, True)
 
-
-# === Problem 5
-
 class RandomWalkRobot(BaseRobot):
     """
     A RandomWalkRobot is a robot with the "random walk" movement
     strategy: it chooses a new direction at random after each
     time-step.
     """
-    # TODO: Your code goes here
     def updatePositionAndClean(self):
         """
         Simulate the passage of a single time-step.
@@ -538,7 +504,6 @@ class RandomWalkRobot(BaseRobot):
         Move the robot to a new position and mark the tile it is on as having
         been cleaned.
         """
-        # TODO: Your code goes here
         #check if the tile I'm on hasn't been cleaned than mark it as clean
         if self.room.isTileCleaned(self.getRobotPosition().getX(),self.getRobotPosition().getY()) == False:
             #print 'tile was not clean'
@@ -581,9 +546,6 @@ class RandomWalkRobot(BaseRobot):
 ##    total = total + len(trial)
 ##print total / len(avg)
 ## 
-
-
-# === Problem 6
 
 def showPlot5(method, robotTypesArray,numberOfRobots, room, percentageToClean):
     """
