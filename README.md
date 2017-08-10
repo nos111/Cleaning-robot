@@ -35,7 +35,7 @@ Functions to provide analytical data are provided:
 <h2>-“showPlot4” Produces a plot showing cleaning time vs. percentage cleaned, for
 each of 1-5 robots.
 </h2>
-<img src="https://github.com/nos111/MIT-OCW/blob/master/Introduction%20to%20Computer%20Science%20(fall%202008)/assignment11/images/GraphTimeVSPercentageCleaned.png?raw=true">
+<img src="https://github.com/nos111/Cleaning-robot/blob/master/images/GraphTimeVSPercentageCleaned.png?raw=true">
 
 <h2>-"showPlot5" Produces a plot comparing the two robot strategies.
 </h2>
