@@ -1,12 +1,12 @@
 This is the code of a robot that clean a room. The robot will take the measures of the room. Walk over it and clean every tile that he passes on. He will keep track of the tiles he was on and that has been cleaned in order to minimize repeated movements. 
 
-The robot follow this cleaning strategy:
-1- Check if the tile in front of you is clean
-2- if clean move your direction by 30 degrees
-3- repeat number 2 until you find a dirty tile
-4- if no dirty tiles are found and the whole surrounding is checked: move to a random tile
-5- repeat the earlier steps
-6- if the robot hits a wall, he will change the direction by 30 degrees until he finds a tile.
+The robot follow this cleaning strategy:<br>
+1- Check if the tile in front of you is clean<br>
+2- if clean move your direction by 30 degrees<br>
+3- repeat number 2 until you find a dirty tile<br>
+4- if no dirty tiles are found and the whole surrounding is checked: move to a random tile<br>
+5- repeat the earlier steps<br>
+6- if the robot hits a wall, he will change the direction by 30 degrees until he finds a tile.<br>
 
 I have tried different angels and from the results I got, 30 degrees gave the best results and the fastest cleaning.
 
